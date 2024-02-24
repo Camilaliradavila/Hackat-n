@@ -106,5 +106,3 @@ for filename in os.listdir(folder_path):
     data_dict['PDF_text'].append(file_pdf)
 
 final_dataframe = pd.DataFrame(data_dict)
-
-final_dataframe.iloc[0, 1]

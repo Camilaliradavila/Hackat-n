@@ -7,9 +7,17 @@ Original file is located at
     https://colab.research.google.com/drive/10GG_JwR70ubNZ-Hp-y6eRHyFzwEV2NV0
 """
 
-st.title('Uber pickups in NYC')
+import streamlit as st
+import pandas as pd
 
 st.write("""
-#hackatón
-odio todo
+# AIRA
+Your AI-based Research Assistant
 """)
+
+uploaded_files = st.file_uploader("Choose a PDF file", accept_multiple_files=True)
+for uploaded_file in uploaded_files:
+    bytes_data = uploaded_file.read()
+    st.write("filename:", uploaded_file.name)
+    st.write(bytes_data)
+
